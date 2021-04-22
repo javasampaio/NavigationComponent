@@ -1,0 +1,4 @@
+include ':dynamicfeaturesecond'
+include ':dynamicfeatureone'
+include ':app'
+rootProject.name = "navigationTeste"

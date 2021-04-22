@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/includedGraphOne">
+
+    <include-dynamic
+        android:id="@+id/includedGraphOne"
+        app:moduleName="dynamicfeatureone"
+        app:graphResName="first_module_nav_graph"
+        app:graphPackage="${applicationId}.dynamicfeatureone" />
+
+    <include-dynamic
+        android:id="@+id/includedGraphSecond"
+        app:moduleName="dynamicfeaturesecond"
+        app:graphResName="second_module_nav_graph"
+        app:graphPackage="${applicationId}.dynamicfeaturesecond" />
+
+</navigation>

@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@id/includedGraphSecond"
+    app:startDestination="@id/SecondModuleFragment">
+
+    <fragment
+        android:id="@+id/SecondModuleFragment"
+        android:name="br.com.sam.dynamicfeaturesecond.SecondModuleFragment"
+        android:label="@string/second_fragment_label">
+        <action
+            android:id="@+id/action_SecondModuleFragment_to_FirstModuleFragment"
+            app:destination="@id/FirstModuleFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/FirstModuleFragment"
+        android:name="br.com.sam.dynamicfeatureone.FirstModuleFragment"
+        app:moduleName="dynamicfeatureone"/>
+
+    <include-dynamic
+        android:id="@+id/includedGraphOne"
+        app:moduleName="dynamicfeatureone"
+        app:graphResName="first_module_nav_graph"
+        app:graphPackage="${applicationId}.dynamicfeatureone" />
+</navigation>
